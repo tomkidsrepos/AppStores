@@ -16,3 +16,21 @@ Depiction: https://github.com/tomkidsrepos/AppStores
 Name: 9mm v1.0.3 (iOS 5.1)
 Sponsor: Admin <admin@localhost>
 
+Package: com.atebits.Tweetie2
+Version: 5.0.3
+Architecture: iphoneos-arm
+Maintainer: Admin <admin@localhost>
+Depends: firmware (>= 5.0), uikittools, appsync
+Filename: work/deb/com.atebits.Tweetie2-5.0.3-iOS-5.0.deb
+Size: 7664918
+MD5sum: d2013a2da41046bf1b135b73517c040e
+SHA1: 1cd9f412ce33206acd441f471a80afe427572bbb
+SHA256: a19af645d7390016e10fb5b7c156080170d9c3af6249ec87747c3ef12061320a
+Section: AppStore Apps
+Homepage: https://github.com/tomkidsrepos/AppStores
+Description: The decrypted ipa file: gdrive_app_1UDKWP7DIRRvlxG7NNrGh2LDEK50a8mpw.ipa converted to .deb automatically by https://alex-free.github.io/ipa2deb .
+Author: Admin <admin@localhost>
+Depiction: https://github.com/tomkidsrepos/AppStores
+Name: Twitter v5.0.3 (iOS 5.0)
+Sponsor: Admin <admin@localhost>
+
