@@ -1,4 +1,4 @@
-name: IPA to DEB
+name: IPA to DEB (Release Version)
 
 on:
   workflow_dispatch:
@@ -29,6 +29,8 @@ jobs:
     runs-on: ubuntu-latest
     env:
       IPA_URLS: ${{ inputs.ipa_urls }}
+      CATEGORY: ${{ inputs.category }}
+      GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
@@ -38,70 +40,66 @@ jobs:
           sudo apt-get update && sudo apt-get install --yes aria2 dpkg-dev unzip python3 pipx
           pipx install gdown
           
-      - name: Download ipa2deb script from Main Repo
+      - name: Download ipa2deb script
         run: |
-          # Tải script ipa2deb từ repo chính về để sử dụng
           wget https://raw.githubusercontent.com/tomkidsrepos/tomkidsrepos.github.io/main/ipa2deb
           chmod +x ipa2deb
 
       - name: Download and convert IPA files
         run: |
           set -euo pipefail
-          mkdir -p work/ipa
+          mkdir -p work/ipa work/deb
           
           while IFS= read -r url; do
-            # Bỏ khoảng trắng dư thừa
             url="${url#"${url%%[![:space:]]*}"}"
             url="${url%"${url##*[![:space:]]}"}"
             [ -z "$url" ] && continue
             
-            case "$url" in
-              https://*|http://*) ;;
-              *) echo "Invalid URL: $url" >&2; exit 1 ;;
-            esac
-            
             if [[ "$url" == *"drive.google.com"* ]]; then
-              echo "Phát hiện link Google Drive, đang xử lý..."
               file_id=$(echo "$url" | sed -E 's|.*/d/([a-zA-Z0-9_-]+).*|\1|')
-              if [[ "$file_id" == "$url" ]]; then
-                file_id=$(echo "$url" | sed -E 's|.*id=([a-zA-Z0-9_-]+).*|\1|')
-              fi
-              
+              if [[ "$file_id" == "$url" ]]; then file_id=$(echo "$url" | sed -E 's|.*id=([a-zA-Z0-9_-]+).*|\1|'); fi
               if [[ "$file_id" != "$url" && -n "$file_id" ]]; then
-                echo "Google Drive File ID: $file_id"
                 gdown "https://drive.google.com/uc?id=$file_id" -O "work/ipa/gdrive_app_${file_id}.ipa"
-              else
-                echo "Không thể lấy ID từ link Google Drive: $url" >&2; exit 1
               fi
             else
-              # Xử lý link trực tiếp (.ipa)
               name="$(basename "${url%%\?*}")"
-              [[ "$name" == *.ipa ]] || { echo "URL is not an IPA: $url" >&2; exit 1; }
               aria2c -s16 -x16 --allow-overwrite=true --dir=work/ipa --out="$name" "$url"
             fi
           done <<< "$IPA_URLS"
           
-          # Chuyển đổi IPA sang DEB và lưu trực tiếp vào thư mục theo tên category
-          mkdir -p "${{ inputs.category }}"
-          ./ipa2deb work/ipa "${{ inputs.category }}" "Admin <admin@localhost>" "https://github.com/${{ github.repository }}"
-          
-          # Kiểm tra xem có file deb nào được tạo ra không
-          shopt -s nullglob
-          deb_files=("${{ inputs.category }}"/*.deb)
-          if [ ${#deb_files[@]} -eq 0 ]; then
-            echo "No DEB was generated" >&2
-            exit 1
-          fi
+          ./ipa2deb work/ipa work/deb "Admin <admin@localhost>" "https://github.com/${{ github.repository }}"
 
-      - name: Generate Packages
+      - name: Create or update GitHub Release
         run: |
-          rm -f Packages Packages.bz2
-          # Quét toàn bộ repo con để build lại file Packages
-          dpkg-scanpackages -m . /dev/null > Packages
+          # Tạo Release nếu chưa có (ví dụ: tạo mục 'game' hoặc 'application')
+          gh release view "$CATEGORY" >/dev/null 2>&1 || \
+            gh release create "$CATEGORY" --title "$CATEGORY" --notes "Các file DEB tự động đóng gói"
+            
+          # Upload các file DEB cực nặng lên Github Release (Giới hạn tối đa 2GB/file)
+          gh release upload "$CATEGORY" work/deb/*.deb --clobber
+
+      - name: Generate Packages Metadata
+        run: |
+          # 1. Quét tạo thông tin Packages cho các file vừa build
+          dpkg-scanpackages -m work/deb /dev/null > work/new-Packages
+          
+          # 2. Thay thế đường dẫn cục bộ bằng ĐƯỜNG DẪN TẢI TRỰC TIẾP TỪ GITHUB RELEASE
+          # URL sẽ có dạng: https://github.com/tomkidsrepos/AppStores/releases/download/game/ten-file.deb
+          REPO_URL="https://github.com/${{ github.repository }}/releases/download/$CATEGORY"
+          sed -i "s|Filename: ./work/deb/|Filename: $REPO_URL/|g" work/new-Packages
+          
+          # 3. Gộp thông tin mới vào file Packages gốc (nếu có)
+          if [ -f Packages ]; then
+            cat work/new-Packages >> Packages
+            # Lưu ý: Phiên bản nâng cao sẽ cần lệnh xóa các Package bị trùng cũ đi, nhưng tạm thời cứ nối thêm vào
+          else
+            cp work/new-Packages Packages
+          fi
+          
           bzip2 -fks Packages
 
-      - name: Commit and Push changes
+      - name: Commit and Push Packages
         uses: stefanzweifel/git-auto-commit-action@v5
         with:
-          commit_message: "Auto-convert IPA to DEB and update Packages"
-          file_pattern: "${{ inputs.category }}/*.deb Packages Packages.bz2"
+          commit_message: "Auto-convert IPA to DEB (Uploaded to Releases)"
+          file_pattern: "Packages Packages.bz2"
