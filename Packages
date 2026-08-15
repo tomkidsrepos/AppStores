@@ -90,3 +90,22 @@ Icon: https://tomkidsrepo.cloud/CydiaIcon.png
 Name: PvZ v524 (iOS 2.2.1)
 Sponsor: Admin <admin@localhost>
 
+Package: com.gameloft.NYNights
+Version: 1.1.5
+Architecture: iphoneos-arm
+Maintainer: Admin <admin@localhost>
+Depends: firmware (>= 2.2.1), uikittools, appsync
+Filename: work/deb/com.gameloft.NYNights-1.1.5-iOS-2.2.1.deb
+Size: 47012290
+MD5sum: b2d9be360bd1176eeb48f7f32382ed5e
+SHA1: 29f0f3e6f270ca14e63ce480822ce6bd0adf4cb7
+SHA256: 92b26c0620929a9585d9150aeb031c263994c9efb4be31899cc8e589dd3a1f07
+Section: AppStore Apps
+Homepage: https://github.com/tomkidsrepos/AppStores
+Description: The decrypted ipa file: New%20York%20Nights%201.1.5.ipa converted to .deb automatically by https://alex-free.github.io/ipa2deb .
+Author: Admin <admin@localhost>
+Depiction: https://github.com/tomkidsrepos/AppStores
+Icon: https://tomkidsrepo.cloud/CydiaIcon.png
+Name: NY Nights v1.1.5 (iOS 2.2.1)
+Sponsor: Admin <admin@localhost>
+
