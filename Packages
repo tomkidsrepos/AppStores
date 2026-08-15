@@ -1,0 +1,18 @@
+Package: com.gameloft.9mm
+Version: 1.0.3
+Architecture: iphoneos-arm
+Maintainer: Admin <admin@localhost>
+Depends: firmware (>= 5.1), uikittools, appsync
+Filename: work/deb/com.gameloft.9mm-1.0.3-iOS-5.1.deb
+Size: 753905946
+MD5sum: b39016b9d6b926b4c6b95c5831d19f90
+SHA1: 090c55e080e46ad98a370e347f65ebefc394c136
+SHA256: 48b0b1b1b65b0e69a85fbaf47380938e66d80f9031e0c8707bb1cfc96cbc5abf
+Section: AppStore Apps
+Homepage: https://github.com/tomkidsrepos/AppStores
+Description: The decrypted ipa file: 9mm%20by%20Gameloft%20%281.0.3%29.ipa converted to .deb automatically by https://alex-free.github.io/ipa2deb .
+Author: Admin <admin@localhost>
+Depiction: https://github.com/tomkidsrepos/AppStores
+Name: 9mm v1.0.3 (iOS 5.1)
+Sponsor: Admin <admin@localhost>
+
