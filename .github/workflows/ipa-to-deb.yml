@@ -86,7 +86,8 @@ jobs:
           # 2. Thay thế đường dẫn cục bộ bằng ĐƯỜNG DẪN TẢI TRỰC TIẾP TỪ GITHUB RELEASE
           # URL sẽ có dạng: https://github.com/tomkidsrepos/AppStores/releases/download/game/ten-file.deb
           REPO_URL="https://github.com/${{ github.repository }}/releases/download/$CATEGORY"
-          sed -i "s|Filename: ./work/deb/|Filename: $REPO_URL/|g" work/new-Packages
+          sed -i "s|Filename: \./work/deb/|Filename: $REPO_URL/|g" work/new-Packages
+          sed -i "s|Filename: work/deb/|Filename: $REPO_URL/|g" work/new-Packages
           
           # 3. Gộp thông tin mới vào file Packages gốc (nếu có)
           if [ -f Packages ]; then
