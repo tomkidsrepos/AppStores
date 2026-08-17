@@ -223,3 +223,22 @@ Icon: https://tomkidsrepo.cloud/CydiaIcon.png?v=2
 Name: Spring Clean v1.1.2 (iOS 4.3)
 Sponsor: Tomkids <admin@localhost>
 
+Package: APP02.jyproduct.FingerPiano
+Version: 1.7
+Architecture: iphoneos-arm
+Maintainer: Tomkids <tomkidsstore@gmail.com>
+Depends: firmware (>= 2.2), uikittools, appsync
+Filename: https://github.com/tomkidsrepos/AppStores/releases/download/game/APP02.jyproduct.FingerPiano-1.7-iOS-2.2.deb
+Size: 7057480
+MD5sum: a3ded59dbda11ccfefc47e456be3ffab
+SHA1: 7620b2284844d890f9068838c36fae57b4863746
+SHA256: 9ea76bb93bef3e238435f6cbf38172ed7c909159e8b9a09da66c7df56385e5b0
+Section: AppStore Apps
+Homepage: https://github.com/tomkidsrepos/AppStores
+Description: The decrypted ipa file: gdrive_app_1QZjvVuBB8z3YOxNcv-vrrKZSrTEGjyx2.ipa converted to .deb automatically by https://alex-free.github.io/ipa2deb .
+Author: Tomkids <tomkidsstore@gmail.com>
+Depiction: https://github.com/tomkidsrepos/AppStores
+Icon: https://tomkidsrepo.cloud/CydiaIcon.png?v=2
+Name: FingerPiano v1.7 (iOS 2.2)
+Sponsor: Tomkids <tomkidsstore@gmail.com>
+
