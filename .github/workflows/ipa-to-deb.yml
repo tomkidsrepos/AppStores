@@ -67,7 +67,10 @@ jobs:
             fi
           done <<< "$IPA_URLS"
           
+<<<<<<< HEAD
           ./ipa2deb work/ipa work/deb "Tomkids <tomkidsstore@gmail.com>" "https://github.com/${{ github.repository }}"
+=======
+         
 
       - name: Create or update GitHub Release
         run: |
