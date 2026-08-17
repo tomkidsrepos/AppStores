@@ -185,3 +185,22 @@ Icon: https://tomkidsrepo.cloud/CydiaIcon.png?v=2
 Name: ArtPenguin v1.2.0 (iOS 4.0)
 Sponsor: Admin <admin@localhost>
 
+Package: com.eleganthippo.springcleaning
+Version: 1.1.2
+Architecture: iphoneos-arm
+Maintainer: Admin <admin@localhost>
+Depends: firmware (>= 4.3), uikittools, appsync
+Filename: https://github.com/tomkidsrepos/AppStores/releases/download/utilities/com.eleganthippo.springcleaning-1.1.2-iOS-4.3.deb
+Size: 757104
+MD5sum: 5ba80f7db228bb471fc74aedb6df7c93
+SHA1: 5f6d2f8f752cac53187de38d4e1c890379958b9a
+SHA256: cf16e2958dd9a37bb0c071daa11d31b08a5dbea8743adb89f0c696c988d0b55c
+Section: AppStore Apps
+Homepage: https://github.com/tomkidsrepos/AppStores
+Description: The decrypted ipa file: gdrive_app_1hFwoQB_IAnZRMzGf4A5HnMRruX0W_kdA.ipa converted to .deb automatically by https://alex-free.github.io/ipa2deb .
+Author: Admin <admin@localhost>
+Depiction: https://github.com/tomkidsrepos/AppStores
+Icon: https://tomkidsrepo.cloud/CydiaIcon.png?v=2
+Name: Spring Clean v1.1.2 (iOS 4.3)
+Sponsor: Admin <admin@localhost>
+
