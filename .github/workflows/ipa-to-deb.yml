@@ -67,7 +67,7 @@ jobs:
             fi
           done <<< "$IPA_URLS"
           
-          ./ipa2deb work/ipa work/deb "Tomkids <tomkidsstore@gmail.com>" "https://github.com/${{ github.repository }}"
+          ./ipa2deb work/ipa work/deb "Tomkids" "https://github.com/${{ github.repository }}"
       - name: Create or update GitHub Release
         run: |
           # Tạo Release nếu chưa có (ví dụ: tạo mục 'game' hoặc 'application')
