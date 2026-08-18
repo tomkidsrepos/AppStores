@@ -17,3 +17,22 @@ Icon: https://tomkidsrepo.cloud/CydiaIcon.png?v=2
 Name: ASPHALT4 v1.3.8 (iOS 2.1)
 Sponsor: Tomkids
 
+Package: com.rovio.AngryBirdsHalloween
+Version: 5.2.5
+Architecture: iphoneos-arm
+Maintainer: Tomkids
+Depends: firmware (>= 6.0), uikittools, appsync
+Filename: https://github.com/tomkidsrepos/AppStores/releases/download/game/com.rovio.AngryBirdsHalloween-5.2.5-iOS-6.0.deb
+Size: 57491286
+MD5sum: 53d4dc491902f2d73c8b90283a983290
+SHA1: 2b99080bfa8d4f7f3cfa5e2f3bd0551a5b11108d
+SHA256: 9a8cbd2bed21613ba7a7f6edd845f1ad0f0004e8609f71d8aa9d0719e40d633f
+Section: AppStore Apps
+Homepage: https://github.com/tomkidsrepos/AppStores
+Description: The decrypted ipa file: Angry%20Birds-v5.2.5--iOS6.0-%28Clutch-1.4.6%29.ipa converted to .deb automatically by https://alex-free.github.io/ipa2deb .
+Author: Tomkids
+Depiction: https://github.com/tomkidsrepos/AppStores
+Icon: https://tomkidsrepo.cloud/CydiaIcon.png?v=2
+Name: Angry Birds v5.2.5 (iOS 6.0)
+Sponsor: Tomkids
+
