@@ -1,0 +1,19 @@
+Package: com.skyjet.chaosarenahd
+Version: 6.9.0
+Architecture: iphoneos-arm
+Maintainer: Tomkids
+Depends: firmware (>= 5.1), uikittools, appsync
+Filename: https://github.com/tomkidsrepos/AppStores/releases/download/game/com.skyjet.chaosarenahd-6.9.0-iOS-5.1.deb
+Size: 178972522
+MD5sum: fffdfa8b032182974161cd8872f8893b
+SHA1: 92db663dabb10732f9ee0716e500a5fe60eb92ff
+SHA256: 7845b70fb861f5ec25279b4784e675ba9c123fa9e07e5e3cfb6d49fc3af317a4
+Section: AppStore Apps
+Homepage: https://github.com/tomkidsrepos/AppStores
+Description: The decrypted ipa file: gdrive_app_1sgvCXi0VnX4PTOxfdD3nhghZ26rtUS8P.ipa converted to .deb automatically by https://alex-free.github.io/ipa2deb .
+Author: Tomkids
+Depiction: https://github.com/tomkidsrepos/AppStores
+Icon: https://tomkidsrepo.cloud/CydiaIcon.png?v=2
+Name: CHAOS v6.9.0 (iOS 5.1)
+Sponsor: Tomkids
+
