@@ -17,3 +17,22 @@ Icon: https://tomkidsrepo.cloud/CydiaIcon.png?v=2
 Name: CHAOS v6.9.0 (iOS 5.1)
 Sponsor: Tomkids
 
+Package: com.chairentertainment.birthright
+Version: 7982.136
+Architecture: iphoneos-arm
+Maintainer: Tomkids
+Depends: firmware (>= 6.0), uikittools, appsync
+Filename: https://github.com/tomkidsrepos/AppStores/releases/download/game/com.chairentertainment.birthright-7982.136-iOS-6.0.deb
+Size: 605128098
+MD5sum: 3d0dbe960af6dc1be4fe4d2d7e8ddde8
+SHA1: 5bb49a6e3ea121e2e42990d010552c88e4d30e6c
+SHA256: 891c707bf2cd0ab36d6ee8859394fcb361507432f153123035dbfa29bb98c41f
+Section: AppStore Apps
+Homepage: https://github.com/tomkidsrepos/AppStores
+Description: The decrypted ipa file: gdrive_app_1MfYzXcXOar-xwttJ21-rElHRAe2uXjKd.ipa converted to .deb automatically by https://alex-free.github.io/ipa2deb .
+Author: Tomkids
+Depiction: https://github.com/tomkidsrepos/AppStores
+Icon: https://tomkidsrepo.cloud/CydiaIcon.png?v=2
+Name: Infinity Blade v7982.136 (iOS 6.0)
+Sponsor: Tomkids
+
