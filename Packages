@@ -1,0 +1,19 @@
+Package: de.schnuppig.simdungeon
+Version: 1.01
+Architecture: iphoneos-arm
+Maintainer: Tomkids
+Depends: firmware (>= 2.2), uikittools, appsync
+Filename: https://github.com/tomkidsrepos/AppStores/releases/download/game/de.schnuppig.simdungeon-1.01-iOS-2.2.deb
+Size: 6976264
+MD5sum: ab1a046eff895a18387c024c32d1802a
+SHA1: b3895d5322dd9040e6b02dbd01ca551c968637ea
+SHA256: a92ff032a955130819c9bcbb6053bb7442652aa315f840bf887d0cab74e1b77b
+Section: AppStore Apps
+Homepage: https://github.com/tomkidsrepos/AppStores
+Description: The decrypted ipa file: gdrive_app_1cjso_q2E9cHzHJ0reWsGBWyv-vq--xdr.ipa converted to .deb automatically by https://alex-free.github.io/ipa2deb .
+Author: Tomkids
+Depiction: https://github.com/tomkidsrepos/AppStores
+Icon: https://tomkidsrepo.cloud/CydiaIcon.png?v=2
+Name: SimDungeon v1.01 (iOS 2.2)
+Sponsor: Tomkids
+
