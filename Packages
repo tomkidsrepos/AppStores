@@ -17,3 +17,22 @@ Icon: https://tomkidsrepo.cloud/CydiaIcon.png?v=2
 Name: Troubadour v1.3 (iOS 5.1)
 Sponsor: Tomkids
 
+Package: rousseaddict.oldpipe
+Version: 1
+Architecture: iphoneos-arm
+Maintainer: Tomkids
+Depends: firmware (>= 6.0), uikittools, appsync
+Filename: https://github.com/tomkidsrepos/AppStores/releases/download/application/rousseaddict.oldpipe-1-iOS-6.0.deb
+Size: 17483126
+MD5sum: 08bbce21c1ec74d5b0c5d4809cf84ce2
+SHA1: 9cfe79d0ffc7dc12c34d270278cb163f45dd02a0
+SHA256: d1efa621c84ee74aaa0785a494c981fe8d5de8f07e5c7b486224f4aa820ae4da
+Section: AppStore Apps
+Homepage: https://github.com/tomkidsrepos/AppStores
+Description: The decrypted ipa file: gdrive_app_1PgRe1cXdkeF5Gi6s3wwMe5DImfciO6bp.ipa converted to .deb automatically by https://alex-free.github.io/ipa2deb .
+Author: Tomkids
+Depiction: https://github.com/tomkidsrepos/AppStores
+Icon: https://tomkidsrepo.cloud/CydiaIcon.png?v=2
+Name: oldpipe v1 (iOS 6.0)
+Sponsor: Tomkids
+
